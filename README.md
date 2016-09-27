@@ -4,7 +4,8 @@ Local user should be in this group: **docker**
 
 Then fetch this repository:
 
-    git clone git@github.com:TeMPO-Consulting/docker-unifield
+    git clone git@github.com:Unifield/docker-unifield
+
 
 And go into this one.
 
