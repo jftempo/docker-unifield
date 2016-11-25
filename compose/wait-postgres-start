@@ -14,7 +14,7 @@ do
 		exit 0
 	fi
 	echo "Postgres not started. Sleeping."
-	sleep 1
+	sleep 2
 done
 
 echo "Timed out waiting for Postgres."

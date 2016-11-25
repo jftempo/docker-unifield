@@ -1,4 +1,5 @@
 FROM unifield/base:1
-USER unifield
 ADD unifield/web /opt/unifield/web
+RUN chown -R unifield /opt/unifield/web
+USER unifield
 CMD /opt/unifield/web/openerp-web.py --openerp-host=uf-server

@@ -2,13 +2,13 @@ version: '2'
 
 services:
   uf-web:
-    image: unifield/web:2.1-3
+    image: unifield/web:2.1-3p1
     ports:
      - "8061:8061"
     depends_on:
      - uf-server
   uf-server:
-    image: unifield/server:2.1-3
+    image: unifield/server:2.1-3p1
     ports:
      - "8069:8069"
      - "8070"

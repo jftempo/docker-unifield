@@ -1,4 +1,4 @@
-VER=2.1-3
+VER=2.1-3p1
 
 # The base image does not include any Unifield code
 # so we put a simpler base version on it.
@@ -15,8 +15,8 @@ help:
 
 checkout:
 	mkdir -p unifield
-	bzr checkout --lightweight -r uf$(VER) lp:unifield-server unifield/server
-	bzr checkout --lightweight -r uf$(VER) lp:unifield-web unifield/web
+	bzr checkout --lightweight -r uf$(VER) $(HOME)/unifield/server/branches/trunk unifield/server
+	bzr checkout --lightweight -r uf$(VER) $(HOME)/unifield/web/branches/trunk unifield/web
 
 build:
 	docker build -f Dockerfile-base -t unifield/base:$(BASEVER) .
