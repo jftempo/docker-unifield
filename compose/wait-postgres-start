@@ -6,7 +6,7 @@ if [ -z "$host" ]; then
 	exit 1
 fi
 
-for i in `seq 1 15`
+for i in `seq 1 30`
 do
 	psql -h $host postgres -q -c 'select 1;' > /dev/null
 	if [ $? = 0 ]; then

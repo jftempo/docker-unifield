@@ -1,4 +1,4 @@
-VER=2.1-3p1
+VER=3.0rc2
 
 # The base image does not include any Unifield code
 # so we put a simpler base version on it.
