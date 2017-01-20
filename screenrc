@@ -1,0 +1,20 @@
+vbell off
+startup_message off
+hardstatus alwayslastline
+bind c screen 1 
+screen -t bash 1 /bin/bash
+hardstatus string '%{= kG}[ %{G}%H %{g}] %{= kG} %-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%<'
+bindkey -k k0 select 0
+bindkey -k k1 select 1
+bindkey -k k2 select 2
+bindkey -k k3 select 3
+bindkey -k k4 select 4
+bindkey -k k5 select 5
+bindkey -k k6 select 6
+bindkey -k k7 select 7
+bindkey -k k8 select 8
+bindkey -k k9 select 9
+termcapinfo xterm* ti@:te@
+# for shift UP and DOWN arrows 
+bindkey ^[[1;5A next 
+bindkey ^[[1;5B prev

@@ -1,0 +1,7 @@
+set background=dark
+set autoindent
+autocmd BufRead {*.xml,*.py} set smartindent tabstop=4 shiftwidth=4 smarttab expandtab softtabstop=4
+"match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+set smartindent cinwords=if,elif,else,for,while,with,try,except,finally,def,class
