@@ -91,6 +91,7 @@ RUN apt-get install -y python \
         wkhtmltopdf \
         python-xlwt \
         python-dev \
+        python-openssl \
         python-httplib2 \
         libffi-dev
 
@@ -104,17 +105,20 @@ RUN apt-get install -y pkg-config \
         xvfb
 
 # UF
+# Nightmare to update setuptools with pip or easy_install
+RUN easy_install https://pypi.python.org/packages/00/d7/5511e82e0645ed4b939bb42f0a07450d0cdf9cf3ed08758b459f3d002747/setuptools-20.9.0.tar.gz#md5=e5f4d80fcb68bcac179b327bf1791dec
 RUN pip install -q requests
 RUN pip install -q OERPLib==0.8.3
 RUN pip install -q six==1.10.0
 RUN pip install -q ordereddict
-RUN pip install -q jira
+RUN pip install -q jira==0.50
 RUN pip install -q cffi==1.8.3
 RUN pip install -q bcrypt==3.1.1
 RUN pip install -q passlib==1.6.5
+RUN pip install -q easywebdav==1.2.0
 
 # testfield
-RUN easy_install -U distribute
+#RUN easy_install -U distribute
 RUN pip install -q bottle==0.12.9
 RUN pip install -q lettuce==0.2.21
 RUN pip install -q selenium==2.53.1
